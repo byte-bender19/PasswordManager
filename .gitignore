@@ -1,0 +1,8 @@
+# Ignore generated data
+data/
+passwords.dat
+
+# Ignore compiled binaries
+*.exe
+*.o
+passwordmgr
