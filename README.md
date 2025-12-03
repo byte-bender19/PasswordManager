@@ -1,83 +1,92 @@
-```markdown
-# 🔐 Password Manager – C Console Application
+🔐 Password Manager – C Console Application
 
 A lightweight command-line password manager written in C that securely stores credentials in an encrypted binary file. All usernames and passwords are XOR-encrypted before saving to disk. Works fully offline.
 
-## 🚀 Features
-- Master password authentication (`1234` by default)
-- Add website login credentials
-- Search stored credentials or view all
-- Persistent encrypted storage (`passwords.dat`)
-- Simple and fast local application
+🚀 Features
 
-## 📂 Project Structure
-```
+Master Authentication: Secure access with a master password (1234 by default).
+
+Manage Credentials: Add website login credentials easily.
+
+Search & View: Search stored credentials or view the entire list.
+
+Persistent Storage: Data is saved to passwords.dat (encrypted).
+
+Local & Fast: Runs entirely on your machine without internet dependencies.
+
+📂 Project Structure
 
 PasswordManager/
-├─ src/
-│  └─ PasswordManager.c
-├─ data/
-│  └─ passwords.dat  (auto-generated, not stored in Git)
-└─ README.md
+├── src/
+│   └── PasswordManager.c    # Main source code
+├── data/
+│   └── passwords.dat        # Auto-generated encrypted data (not stored in Git)
+└── README.md                # Project documentation
 
-````
 
-## 🛠️ Build & Run
+🛠️ Build & Run
 
-### Linux / macOS
-```bash
+Linux / macOS
+
+# Compile the program
 gcc src/PasswordManager.c -o passwordmgr
+
+# Run the application
 ./passwordmgr
-````
 
-### Windows (MinGW)
 
-```bash
+Windows (MinGW)
+
+:: Compile the program
 gcc src/PasswordManager.c -o passwordmgr.exe
+
+:: Run the application
 passwordmgr.exe
-```
 
-## 🧩 Usage
 
-1️⃣ Launch the program
-2️⃣ Enter master password:
+🧩 Usage
 
-```
+Launch the program using the commands above.
+
+Enter the master password:
+
 1234
-```
 
-3️⃣ Choose an action:
 
-```
+Choose an action from the menu:
+
 1 → Add new credential
+
 2 → View or search saved credentials
+
 3 → Exit
-```
 
-Credentials are automatically encrypted and saved into `passwords.dat`.
+Credentials are automatically encrypted and saved into passwords.dat upon entry.
 
-## 🔏 Encryption Information
+🔏 Encryption Information
 
-XOR-based reversible encryption:
+This project uses XOR-based reversible encryption for demonstration purposes.
 
-```c
-#define ENCRYPTION_KEY 'X'
-```
+Encryption Key: 'X'
 
-✔ Good for learning
-⚠ Not suitable for real-world password storage
+Status:
 
-## 📌 Planned Improvements
+✔ Good for learning C file handling and basic bitwise operations.
 
-* Stronger encryption (hashed master password, AES)
-* Better input protection (mask password entry)
-* Edit / delete stored credentials
-* Backup & export support
-* Input validations and UI improvements
+⚠ Not suitable for real-world high-security password storage.
 
-## 👤 Author
+📌 Planned Improvements
 
-**Aditya Dewangan**
+[ ] Stronger encryption (Hashed master password, AES implementation)
 
-```
-```
+[ ] Better input protection (Masking password characters with *)
+
+[ ] Edit and Delete functionality for specific credentials
+
+[ ] Backup and Export support (CSV/JSON)
+
+[ ] Enhanced input validation and UI improvements
+
+👤 Author
+
+Aditya Dewangan
